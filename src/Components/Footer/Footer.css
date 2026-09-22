@@ -1,0 +1,212 @@
+
+.footer {
+    background-color: #0a0a0a;
+    padding-top: 80px;
+    direction: rtl;
+    text-align: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+.footer-brand .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* The Orange Logo Box */
+.footer-brand .footer-logo span {
+    background-color: #ff6a00;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-brand .footer-logo h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.footer-brand p {
+    color: #888;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+/* Social Icons */
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-socials a {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.footer-socials a:hover {
+    color: #ff6a00;
+    border-color: #ff6a00;
+}
+
+
+.footer-column h3, 
+.footer-newsletter h3 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+
+.footer-column h3 span, 
+.footer-newsletter h3 span {
+    width: 35px;
+    height: 2px;
+    background-color: #ff6a00;
+    display: inline-block;
+}
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.footer-links a {
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+    width: fit-content;
+}
+
+.footer-links a i {
+    color: transparent; 
+    transform: translateX(-15px); 
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+}
+
+/* Hover States */
+.footer-links a:hover {
+    color: #ff6a00; 
+}
+
+.footer-links a:hover i {
+    color: #ff6a00; 
+    transform: translateX(0); 
+}
+
+.footer-newsletter p {
+    color: #888;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-newsletter input {
+    background-color: transparent;
+    border: 1px solid #333; /* Default gray border */
+    color: #fff;
+    padding: 12px 15px;
+    border-radius: 8px;
+    outline: none;
+    text-align: right;
+    transition: border-color 0.3s ease;
+}
+
+/* The exact orange border on focus from the reference */
+.footer-newsletter input:focus {
+    border-color: #ff6a00;
+}
+
+.footer-newsletter button {
+    background-color: #ff6a00;
+    color: #fff;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-newsletter button:hover {
+    background-color: #e65c00;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05); 
+    padding: 25px 0;
+    margin-top: 50px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-bottom-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-bottom-links a:hover {
+    color: #ff6a00;
+}
+
+/* Make sure flex layout stacks nicely on small screens */
+@media (max-width: 991px) {
+    .footer-content > div {
+        margin-bottom: 40px;
+    }
+    .footer-bottom .container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,243 @@
+.featured-section {
+    background: #0d0d0d;
+    color: #fff;
+    padding: 80px 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    border-radius: 50px;
+    color: #ff6600;
+    background: #1a1410;
+    border: 1px solid rgba(255, 102, 0, 0.3);
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.section-badge span:first-child {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ff6600;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    color: #888;
+    margin: 0;
+}
+
+.section-view-all {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.section-view-all:hover {
+    color: #ff8533;
+}
+
+.section-view-all i {
+    transition: 0.3s ease;
+}
+
+.section-view-all:hover i {
+    transform: translateX(-5px);
+}
+
+.featured-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    background: #141414;
+    border: 1px solid #292929;
+    border-radius: 24px;
+    transition: 0.3s ease;
+}
+
+.featured-card:hover {
+    border-color: #ff6600;
+}
+
+.featured-image {
+    position: relative;
+    min-height: 350px;
+    overflow: hidden;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.featured-card:hover .featured-image img {
+    transform: scale(1.04);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 12px;
+    background: #ff6600;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.featured-content {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    color: #888;
+    font-size: 12px;
+}
+
+.post-meta i {
+    margin-left: 5px;
+}
+
+.category-badge {
+    padding: 6px 12px;
+    border-radius: 50px;
+    color: #ff6600;
+    background: #1f1610;
+    border: 1px solid rgba(255, 102, 0, 0.2);
+}
+
+.featured-content h3 {
+    font-size: 26px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    transition: 0.3s ease;
+}
+
+.featured-card:hover h3 {
+    color: #ff6600;
+}
+
+.featured-content > div > p {
+    color: #999;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.featured-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #292929;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #444;
+}
+
+.author div {
+    display: flex;
+    flex-direction: column;
+}
+
+.author strong {
+    font-size: 13px;
+}
+
+.author span {
+    color: #666;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.read-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #ff6600;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.read-link i {
+    transition: 0.3s ease;
+}
+
+.read-link:hover i {
+    transform: translate(2px, -2px);
+}
+
+@media (max-width: 991px) {
+    .featured-card {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-header {
+        align-items: flex-start;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .featured-content {
+        padding: 25px;
+    }
+
+    .featured-content h3 {
+        font-size: 21px;
+    }
+
+    .featured-footer {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+}

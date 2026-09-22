@@ -1,0 +1,360 @@
+/* ==================================
+   BASE LAYOUT & FIXING COLUMNS
+   ================================== */
+.post-content {
+    padding: 80px 0;
+    background-color: #0a0a0a;
+    direction: rtl; 
+    text-align: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Forces Sidebar to the right and Article to the left strictly */
+@media (min-width: 992px) {
+    .post-layout-row {
+        display: flex;
+    }
+    .sidebar-column {
+        order: 1; 
+    }
+    .article-column {
+        order: 2; 
+    }
+}
+
+.post-sidebar {
+    position: sticky;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Base styles for widgets */
+.table-of-contents,
+.post-tags,
+.post-share,
+.post-author,
+.post-info > div {
+    background-color: #121212;
+    border: 1px solid #1f1f1f;
+    border-radius: 16px;
+}
+
+/* Widget Header (Title with Orange Icon Box) */
+.widget-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.widget-header h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.header-icon {
+    background-color: rgba(255, 106, 0, 0.15); /* Faint orange background */
+    color: #ff6a00;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+/* ==================================
+   TABLE OF CONTENTS
+   ================================== */
+.table-of-contents {
+    padding: 25px;
+    counter-reset: toc-counter;
+}
+
+.table-of-contents button {
+    width: 100%;
+    background: transparent;
+    border: 1px solid transparent; /* Ready for hover border */
+    border-radius: 8px;
+    color: #b5b5b5;
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns to the right in RTL */
+    gap: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Numbers on the right side of the text */
+.table-of-contents button::before {
+    counter-increment: toc-counter;
+    content: counter(toc-counter);
+    background-color: #1a1a1a;
+    color: #888;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect as requested */
+.table-of-contents button:hover {
+    background-color: #1D1510;
+    border: 1px solid #ff6a00;
+    color: #fff;
+}
+
+.table-of-contents button:hover::before {
+    background-color: transparent;
+    color: #ff6a00;
+}
+
+/* ==================================
+   POST INFO (Read Time & Date)
+   ================================== */
+.post-info {
+    display: flex;
+    gap: 15px;
+}
+
+.post-info > div {
+    flex: 1;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.post-info i {
+    color: #ff6a00;
+    font-size: 1.5rem;
+}
+
+.post-info span {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* ==================================
+   BACK TO BLOG / NEWSLETTER
+   ================================== */
+.back-to-blog {
+    background: linear-gradient(180deg, #1f1209 0%, #121212 100%);
+    border: 1px solid #3a2210;
+    border-radius: 16px;
+    padding: 30px 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back-to-blog .icon {
+    color: #555;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.back-to-blog h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.back-to-blog p {
+    color: #a0a0a0;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.back-to-blog a {
+    display: block;
+    width: 100%;
+    background-color: #ff6a00;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-blog a:hover {
+    background-color: #e65c00;
+}
+
+/* ==================================
+   MAIN ARTICLE CONTENT
+   ================================== */
+.post-description {
+    background-color: #150d06;
+    border: 1px solid #3a2210;
+    color: #d0d0d0;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 50px;
+}
+
+.post-article {
+    color: #fff;
+    line-height: 2;
+    margin-bottom: 60px;
+}
+
+.post-article h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.post-article h3 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.heading-icon {
+    background-color: #ff6a00;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.post-article p {
+    color: #b5b5b5;
+    font-size: 1.05rem;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+/* ==================================
+   BOTTOM WIDGETS (Tags, Share, Author)
+   ================================== */
+.post-tags,
+.post-share,
+.post-author {
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Stacks title on top and content underneath */
+}
+
+.post-tags .widget-header,
+.post-share .widget-header {
+    margin-bottom: 15px;
+}
+
+/* Tags List */
+.tags-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tags-list span {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    color: #888;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.tags-list span:hover {
+    color: #ff6a00;
+    border-color: #ff6a00;
+    background-color: #1D1510;
+}
+
+/* Share Buttons */
+.share-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.share-buttons button {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    color: #a0a0a0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.share-buttons button:hover {
+    border-color: #ff6a00;
+    color: #ff6a00;
+    background-color: #1D1510;
+}
+
+/* Author Box Styling */
+.post-author {
+    flex-direction: row; /* Keeps image and text side-by-side */
+    align-items: center;
+    gap: 20px;
+}
+
+.post-author img {
+    width: 85px;
+    height: 85px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 1px solid #3a2210;
+}
+
+.post-author h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin: 0 0 8px 0;
+}
+
+.post-author p {
+    color: #b5b5b5;
+    font-size: 0.95rem;
+    margin: 0;
+}
+@media (min-width: 992px) {
+    .post-layout-row {
+        display: flex;
+    }
+    .sidebar-column {
+        order: 2; /* Moves sidebar to the left */
+    }
+    .article-column {
+        order: 1; /* Moves article to the right */
+    }
+}

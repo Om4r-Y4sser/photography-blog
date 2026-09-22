@@ -1,0 +1,113 @@
+.categories-section {
+    background: #0a0a0a;
+    color: #fff;
+    padding: 80px 0;
+}
+
+.categories-heading {
+    margin-bottom: 45px;
+}
+
+.categories-heading h2 {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.categories-heading p {
+    color: #888;
+    margin: 0;
+}
+
+.category-card {
+    position: relative;
+    min-height: 180px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+    background: #121212;
+    border: 1px solid #292929;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.category-card:hover {
+    color: #fff;
+    background: #ff6600;
+    border-color: #ff6600;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(255, 102, 0, 0.2);
+}
+
+.category-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    color: #ff6600;
+    background: rgba(255, 102, 0, 0.1);
+    border: 1px solid #333;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.category-icon i {
+    font-size: 18px;
+}
+
+.category-card:hover .category-icon {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+}
+
+.category-content {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.category-content h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.category-content span {
+    color: #777;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+
+.category-card:hover .category-content span {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.category-arrow {
+    position: absolute;
+    left: 15px;
+    top: 60%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.category-card:hover .category-arrow {
+    opacity: 1;
+}
+
+.category-arrow i {
+    font-size: 14px;
+}
